@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Калькулятор суммы</title>
+</head>
+<body>
+<h1>Введите числа для суммирования</h1>
+<form action="/sum" method="get">
+    <label for="numbers">Числа (через запятую):</label>
+    <input type="text" id="numbers" name="numbers" placeholder="1,2,3,4">
+    <button type="submit">Посчитать</button>
+</form>
+
+<!-- Здесь отобразится результат -->
+<div th:if="${result}" th:text="'Сумма: ' + ${result}"></div>
+</body>
+</html>
